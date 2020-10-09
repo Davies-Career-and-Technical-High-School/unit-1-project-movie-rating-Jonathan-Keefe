@@ -20,7 +20,12 @@ class MovieRating {
       double focus2;
       double focusav;
       double critic;
+      double whw;
+      double whf;
+      double whc;
+      double who;
       int overall;
+  
 
       //Name
       System.out.println("Please enter the movie name");
@@ -51,7 +56,10 @@ class MovieRating {
       critic = scan.nextDouble();
 
       //Overall Rating
-      overall = ((int)webav + (int)focusav + (int)critic)/3; 
+      who = webav*0.2;
+      whf = focusav*0.3;
+      whc = critic*0.5;
+      overall = (int)who + (int)whf + (int)whc; 
 
       //Output
       System.out.println("Title: " + name);
